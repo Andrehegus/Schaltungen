@@ -15,27 +15,16 @@ import "fmt"
 // je nach Zustand wird z.B. Licht an / aus gehen
 // die zwei Schalter brauchen zur Leuchte eine festgelegte verdratung
 
-const (
-	Schalter1 bool = false
-	Schalter2
-)
-
-func Wechselschaltung() bool {
-	array := [2]bool{Schalter1, Schalter2}
-
-	// Schalter 1
-	array[0] = false // Schalter1
-	array[1] = false // Schalter2
-
+func Wechselschaltung(s1 bool, s2 bool) bool {
 	// Logic
 	// Todo Logic besser zusammenfassen, schauen ob es besser geht...
-	if array[0] && array[1] {
+	if s1 && s2 {
 		return false
 	}
-	if array[0] && !array[1] {
+	if s1 && !s2 {
 		return true
 	}
-	if (!array[0]) && array[1] {
+	if (!s1) && s2 {
 		return true
 	}
 	return false
@@ -45,8 +34,10 @@ func main() {
 	fmt.Println("a) Wechselschaltung...")
 
 	strLicht := "aus"
+	s1 := false
+	s2 := false
 
-	licht := Wechselschaltung()
+	licht := Wechselschaltung(s1, s2)
 	if licht {
 		strLicht = "an"
 	} else {
