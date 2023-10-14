@@ -25,7 +25,7 @@ func Wechselschaltung(ws1 bool, ws2 bool, ks bool) bool {
 	// 0 && 1 = 1
 	// alles weitere = 0
 	// entspricht der XOR Schalterfunktion!!!
-	// ks3 ist der Kreuzschalter, der jeweils die anderen Schalterstellungen mit überprüft
+
 	// ks = Kreuzschalter
 	// ws1 = Wechselschalter 1
 	// ws2 = Wechselschalter 2
